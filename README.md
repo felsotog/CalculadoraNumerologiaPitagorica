@@ -1,10 +1,8 @@
 # Numerología Pitagórica - Árbol Conductual
 
-![Captura de Pantalla del Árbol]
+![Captura de Pantalla del Formulario](https://imgur.com/a/dTSQMsG) 
 
-(https://imgur.com/a/dTSQMsG) 
-
-(https://imgur.com/a/j5JpmIw)
+![Captura de Pantalla del Árbol](https://imgur.com/a/j5JpmIw)
 
 
 Aplicación web interactiva para generar un Árbol Conductual personalizado basado en la Numerología Pitagórica. Ingresa tu nombre y fecha de nacimiento para visualizar tu árbol y descubrir el significado de cada número según el manual de Pamela Tapia P.
