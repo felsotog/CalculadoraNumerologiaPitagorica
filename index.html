@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Numerología Pitagórica - Árbol Conductual</title>
+    <link rel="stylesheet" href="/asssets/css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="background-pattern"></div>
+    <div class="contenedor-principal">
+        <header class="header-section">
+            <div class="logo-container">
+                <i class="fas fa-infinity logo-icon"></i>
+            </div>
+            <h1>NUMEROLOGÍA PITAGÓRICA</h1>
+            <h2>EL PODER DE LOS NÚMEROS</h2>
+            <div class="decorative-line"></div>
+        </header>
+        
+        <div class="seccion-entrada">
+            <h3><i class="fas fa-user-edit"></i> Ingresa tus Datos:</h3>
+            <div class="input-group">
+                <label for="nombreCompleto"><i class="fas fa-signature"></i> Nombre Completo:</label>
+                <input type="text" id="nombreCompleto" placeholder="Ej: Luis Alex Perez Gonzalez">
+            </div>
+            <div class="fecha-nacimiento">
+                <h4><i class="fas fa-calendar-alt"></i> Fecha de Nacimiento:</h4>
+                <div class="fecha-inputs">
+                    <div class="input-group">
+                        <label for="diaNacimiento">Día:</label>
+                        <input type="number" id="diaNacimiento" min="1" max="31" placeholder="DD">
+                    </div>
+                    <div class="input-group">
+                        <label for="mesNacimiento">Mes:</label>
+                        <input type="number" id="mesNacimiento" min="1" max="12" placeholder="MM">
+                    </div>
+                    <div class="input-group">
+                        <label for="anioNacimiento">Año:</label>
+                        <input type="number" id="anioNacimiento" min="1900" max="2099" placeholder="AAAA">
+                    </div>
+                </div>
+            </div>
+            <button id="botonGenerar">
+                <i class="fas fa-magic"></i>
+                <span>Generar Árbol Numerológico</span>
+            </button>
+        </div>
+
+        <div id="arbolNumerologicoContenedor" class="seccion-arbol" style="display:none;">
+            <h3><i class="fas fa-tree"></i> Tu Árbol de Personalidad:</h3>
+            <div class="arbol-visual-wrapper">
+                <svg id="svgLineasConectoras" class="svg-lineas"></svg>
+                <div class="arbol-visual">
+                    <div class="nodo-contenedor" id="contenedorI">
+                        <span class="nodo-etiqueta">I</span>
+                        <div class="nodo-arbol impulso" id="nodoI" title="Impulso del Alma (Vocales)">?</div>
+                        <span class="nodo-descripcion">Impulso del Alma</span>
+                    </div>
+                    <div class="nodo-contenedor" id="contenedorE">
+                        <span class="nodo-etiqueta">E</span>
+                        <div class="nodo-arbol personalidad" id="nodoE" title="Personalidad Externa (Consonantes)">?</div>
+                        <span class="nodo-descripcion">Personalidad Externa</span>
+                    </div>
+                    <div class="nodo-contenedor" id="contenedorP">
+                        <span class="nodo-etiqueta">P</span>
+                        <div class="nodo-arbol destino" id="nodoP" title="Destino / Expresión (Nombre Completo)">?</div>
+                        <span class="nodo-descripcion">Destino/Expresión</span>
+                    </div>
+                    <div class="nodo-contenedor" id="contenedorX">
+                        <span class="nodo-etiqueta">X</span>
+                        <div class="nodo-arbol dia" id="nodoX" title="Día de Nacimiento">?</div>
+                        <span class="nodo-descripcion">Día de Nacimiento</span>
+                    </div>
+                    <div class="nodo-contenedor" id="contenedorY">
+                        <span class="nodo-etiqueta">Y</span>
+                        <div class="nodo-arbol mes" id="nodoY" title="Mes de Nacimiento">?</div>
+                        <span class="nodo-descripcion">Mes de Nacimiento</span>
+                    </div>
+                    <div class="nodo-contenedor" id="contenedorT">
+                        <span class="nodo-etiqueta">T</span>
+                        <div class="nodo-arbol sendero" id="nodoT" title="Suma de Día+Mes+Año (Sendero Natal)">?</div>
+                        <span class="nodo-descripcion">Sendero Natal</span>
+                    </div>
+                    <div class="nodo-contenedor" id="contenedorZ">
+                        <span class="nodo-etiqueta">Z</span>
+                        <div class="nodo-arbol suma" id="nodoZ" title="Suma de Día+Mes">?</div>
+                        <span class="nodo-descripcion">Suma Día+Mes</span>
+                    </div>
+                </div>
+            </div>
+            <p class="instruccion-clic">
+                <i class="fas fa-hand-pointer"></i>
+                Haz clic en un número del árbol para ver su significado
+            </p>
+        </div>
+
+        <div id="descripcionNumeroContenedor" class="seccion-descripcion" style="display:none;">
+            <h3 id="descripcionTitulo"></h3>
+            <div id="notaAumentada" style="display:none;">
+                <i class="fas fa-exclamation-triangle"></i>
+                Este número proviene de un cálculo que resultó en un múltiplo de 10 (ej: 10, 20), por lo que sus características pueden estar aumentadas o exacerbadas.
+            </div>
+            <div class="caracteristicas-container">
+                <div class="caracteristica-luz">
+                    <h4><i class="fas fa-sun"></i> Características Luz:</h4>
+                    <p id="descripcionLuz"></p>
+                </div>
+                <div class="caracteristica-sombra">
+                    <h4><i class="fas fa-moon"></i> Características Sombra:</h4>
+                    <p id="descripcionSombra"></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="/asssets/js/script.js"></script>
+</body>
+</html>
