@@ -5,7 +5,7 @@
 ![Captura de Pantalla del Árbol](https://i.imgur.com/xPnumOy.png)
 
 
-Aplicación web interactiva para generar un Árbol Conductual personalizado basado en la Numerología Pitagórica. Ingresa tu nombre y fecha de nacimiento para visualizar tu árbol y descubrir el significado de cada número según el manual de Pamela Tapia P.
+Aplicación web interactiva para generar un Árbol Conductual personalizado basado en la Numerología Pitagórica. Ingresa tu nombre y fecha de nacimiento para visualizar tu árbol y descubrir el significado de cada número.
 
 ## Características
 
@@ -21,7 +21,6 @@ Aplicación web interactiva para generar un Árbol Conductual personalizado basa
 *   CSS3 (CSS Grid para el layout del árbol)
 *   JavaScript (ES6+)
 *   SVG
-*   Bootstrap 5
 
 ## ¿Cómo usarlo?
 
